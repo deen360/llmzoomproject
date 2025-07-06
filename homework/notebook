@@ -1,0 +1,30 @@
+install minconda 
+https://www.anaconda.com/docs/getting-started/miniconda/install#linux-terminal-installer
+- wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+- bash Miniconda3-latest-Linux-x86_64.sh
+
+pip install Jupyter notebook tqdm elasticsearch tqdm
+
+export DEEPSEEK_API_KEY="sk-164a8427ec1848c78b8d6ac739c9e141"
+
+
+elastic serch docker
+
+docker run -it \
+    --rm \
+    --name elasticsearch \
+    -m 4GB \
+    -p 9200:9200 \
+    -p 9300:9300 \
+    -e "discovery.type=single-node" \
+    -e "xpack.security.enabled=false" \
+    docker.elastic.co/elasticsearch/elasticsearch:8.4.3
+
+qdrant docker
+```bash
+docker pull qdrant/qdrant
+
+docker run -p 6333:6333 -p 6334:6334 \
+   -v "$(pwd)/qdrant_storage:/qdrant/storage:z" \
+   qdrant/qdrant
+```
