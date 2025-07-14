@@ -28,3 +28,43 @@ docker run -p 6333:6333 -p 6334:6334 \
    -v "$(pwd)/qdrant_storage:/qdrant/storage:z" \
    qdrant/qdrant
 ```
+
+-> doing vector search with qdrant:
+import the document
+merge the text you want to add
+start your qdrant server
+Getting and loading the model and it dimension embedding
+Creating a collection
+Embedding the document 
+Inserting the embedded document into qdrant
+Calculating the Cosine similarity between the query and the  document 
+
+
+
+import/download document 
+index the document you import
+build a function to search for query in the fitted document 
+connect to your llm client using the required keys 
+build a prompt using the query and the search results
+define a function to parse the prompt into an llm
+builda frunction that gets the input from the search and build the prompt and the required context and then parses the prompt and the context to the llm
+
+
+to us mcp server
+-Have the my_server.py file
+fastmcp run my_server.py:mcp -> run this in the folder that has the my_serer.py
+export DANGEROUSLY_OMIT_AUTH=true  -> export this
+npx @modelcontextprotocol/inspector ->run this in the place the my_server.py is in another terminal
+
+http://localhost:6274/?DANGEROUSLY_OMIT_AUTH=true#tools
+configuration in inspector
+#fastmcp run my_server.py:mcp
+
+import asyncio
+
+async def main():
+    async with Client("weather_server.py") as mcp_client:
+        print(mcp_client.list_tools())
+
+if __name__ == "__main__":
+    test = asyncio.run(main())
