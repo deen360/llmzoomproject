@@ -5,7 +5,7 @@ https://www.anaconda.com/docs/getting-started/miniconda/install#linux-terminal-i
 
 pip install Jupyter notebook tqdm elasticsearch tqdm
 
-export DEEPSEEK_API_KEY="sk-164a8427ec1848c78b8d6ac739c9e141"
+
 
 
 elastic serch docker
