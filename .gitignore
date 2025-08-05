@@ -7,6 +7,11 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+/workspaces/llmzoomproject/.ipynb_checkpoints
+/llmzoomproject/.ipynb_checkpoints
+workspaces/llmzoomproject/.ipynb_checkpoints
+/.ipynb_checkpoints
+.ipynb_checkpoints
 .Python
 build/
 develop-eggs/
